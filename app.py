@@ -31,7 +31,7 @@ def show_solution():
 
 @app.route('/graph')
 def show_graph():
-    return render_template('index.html', graph_path = '/static/plot.png', scroll='something')
+        return redirect(url_for('index')+'#graph_div')
     # return redirect(url_for('index') + '#graph_div') 
 
 # def update_solution():

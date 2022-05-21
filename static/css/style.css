@@ -47,8 +47,7 @@ header h1 {
     height: 70vh;
     margin-left: auto;
     margin-right: auto;
-
-
+    margin-top: 26px;
 
     background: url(.png), radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.2) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
@@ -155,7 +154,8 @@ input {
     box-sizing: border-box;
     position: absolute;
     width: 45vw;
-    height: 90vh;
+    height: fit-content;
+    min-height: 90vh;
     left: 50%;
     top: 5%;
 
@@ -177,7 +177,6 @@ input {
     font-weight: 400;
     font-size: 30px;
     line-height: 36px;
-
     color: #FFFFFF;
 }
 
@@ -217,7 +216,7 @@ input {
 .graph_div {
     position: relative;
     height: 100vh;
-    padding-top: 25vh;
+    padding-top: 20vh;
 }
 
 .image_container {
@@ -247,6 +246,18 @@ input {
     border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
+.image_container img {
+    background-blend-mode: overlay, normal;
+    backdrop-filter: blur(20px);
+
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 23px;
+    filter: drop-shadow(0px 4px 4px rgba(164, 144, 28, 0.504));
+    /* -webkit-backdrop-filter: blur(5px); */
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
 #solution_graph {
     vertical-align: middle;
 }
@@ -265,6 +276,31 @@ input {
         background-position-y: 3vh, 30vh;
         /* background-size: 15%, 20%; */
         background-repeat: no-repeat;
+    }
+
+    .solution_box {
+        box-sizing: border-box;
+        position: absolute;
+        width: 90vw;
+        height: fit-content;
+        min-height: 80vh;
+        left: 5%;
+        top: 5%;
+    
+    }
+    
+    #show_graph_button {
+        box-sizing: border-box;
+        position: absolute;
+        left: 27.5vw;
+        top: 90vh;
+    
+        width: 45vw;
+    }
+
+    .image_container img {
+        width: 100vw;
+        
     }
 
 
