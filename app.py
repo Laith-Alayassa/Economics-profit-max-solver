@@ -1,7 +1,3 @@
-from crypt import methods
-from ssl import AlertDescription
-import tempfile
-from tkinter import scrolledtext
 from flask import Flask, redirect, request, render_template, url_for, flash
 from sympy import *
 from sympy.abc import ns
