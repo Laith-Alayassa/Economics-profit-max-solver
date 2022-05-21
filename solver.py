@@ -77,16 +77,17 @@ def solve_profit_max(price, cost, market):
     profit = eval(revenueText) - eval(costText)
 
     # Print output
-    output += "\nProfit = P * Q - C \n" + f"Profit = {revenueText.replace('**', '^')} - ({costText.replace('**', '^')})\n" + f"profit = ${profit}\n" + f"profit = ${round(profit, 4)}"
+    output += "\nProfit = P * Q - C \n" + f"Profit = {revenueText.replace('**', '^')} - ({costText.replace('**', '^')})\n" + f"profit = ${round(profit, 4)}"
 
     # print("\n")
 
-    # # TODO: find monopsony welfare loss
-    # if market == "monopoly":
-    #     welfareLoss = find_monopoly_welfare_loss(Q, cost, p, price, q)
-    #     return q, profit, welfareLoss
+    # TODO: find monopsony welfare loss
+    if market == "monopoly":
+        welfareLoss = find_monopoly_welfare_loss(Q, cost, p, price, q)
+        output += welfareLoss
 
-    return output
+    outputArray = output.split('\n')
+    return outputArray
 
 
 def find_monopoly_welfare_loss(Q, cost, p, price, q):
@@ -99,8 +100,7 @@ def find_monopoly_welfare_loss(Q, cost, p, price, q):
     print(f"b[0] = {b[0]}")
     b = b[0]
     welfareLoss = 1 / 2 * (a - c) * (b - q)  # b-q because q is the monopoly quant and b is the free market quant
-    print(f"\nWelfare loss is equal to {welfareLoss}")
-    return welfareLoss
+    return(f"\n Welfare loss is equal to {welfareLoss}")
 
 
 
