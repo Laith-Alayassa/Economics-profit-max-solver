@@ -1,7 +1,8 @@
 from crypt import methods
+from ssl import AlertDescription
 import tempfile
 from tkinter import scrolledtext
-from flask import Flask, redirect, request, render_template, url_for
+from flask import Flask, redirect, request, render_template, url_for, flash
 from sympy import *
 from sympy.abc import ns
 from plot_maker import create_plot
@@ -22,7 +23,10 @@ def solve():
     cost = request.form['cost']
     market = request.form['market']
     solution = solver.solve_profit_max(price, cost, market)
-    return render_template('index.html', solution = solution, scroll='something') 
+    if len(solution) > 0:
+        return render_template('index.html', solution = solution, scroll='something') 
+    else:
+        return render_template('index.html', error = True)
 
 @app.route('/solution')
 def show_solution():

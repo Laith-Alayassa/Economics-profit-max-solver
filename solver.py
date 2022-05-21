@@ -14,80 +14,73 @@ def solve_profit_max(price, cost, market):
     @param market: type of market (e.g. competitive, monopoly)
     @return: Tuple (profit maximizing quantity, profit generated at that quantity)
     """
-    # market_types = ["competitive", "monopoly", "monopsony"]
 
-    # # Get market type from user
-    # while True:
-    #     market = input("What is the market structure (competitive, monopoly, or monopsony)? ").lower()
-    #     if market not in market_types:
-    #         print(f"I'm unfamiliar with that market, try one of those: {market_types}")
-    #     else:
-    #         break
-
-    # print(f"You are solving a {market} problem: ")
-
-    # Create unknown variable as a symbol
-    Q = symbols("Q")  # symbol means the same thing as a variable in normal language
-
-    # # Set up equations
-    # print("example input for price function: -100 * Q + 4")
-    # print("example input for cost function: Q ^ 2 + 4 * Q - 3 \n")
-
-    ns["Q"] = Symbol("Q")
-    market = market
-
-    # Get price and cost function from user
-
-    price = sympify(price, locals=ns) 
-    cost = sympify(cost, locals=ns)
-
-    p = 0  # price
-    revenue =  price * Q  # setting up revenue equation
+    try:
+        # market_types = ["competitive", "monopoly", "monopsony"]
 
 
-    create_plot(price, cost, revenue) # This is here because the error occurs here if user gives wrong input
+        # Create unknown variable as a symbol
+        Q = symbols("Q")  # symbol means the same thing as a variable in normal language
 
 
-    # write solving process
-    output = "Profit = Revenue - Cost\n" + "Profit = P * Q - Cost\n" + "max Profit =\n∆ Profit/ ∆ Q = 0\nMR - MC = 0\n" + "max Profit = MR - MC = 0\n" + f"max Profit = {diff(revenue)} - ({diff(cost)}) = 0\n" + f"max Profit = {diff(revenue)} = {diff(cost)}\n"
+        ns["Q"] = Symbol("Q")
+        market = market
 
-    # Solve for possible quantities
-    quantities = solve(diff(revenue) - diff(cost), Q)
+        # Get price and cost function from user
 
-    # find possible quantities solutions (could be 0 or higher, if higher choose the higher)
-    q = 0
-    for x in quantities:
-        if x >= 0:
-            print(f"Q could be: {x} units")
-            print(f"Q could be: {N(x, 3)} units")
-        if x > 0:
-            q = x
+        price = sympify(price, locals=ns) 
+        cost = sympify(cost, locals=ns)
 
-    # TODO: test this
-    if market != "monopsony":
-        p = price.subs(Q, q)  # finds price for competitive and monopoly markets by finding price at optimal Q
-    else:
-        p = cost.subs(Q, q) # finds price for monopsony by substituting optimal Q in the cost function
+        p = 0  # price
+        revenue =  price * Q  # setting up revenue equation
 
-    # replacing Q in cost with found quantity value
-    costText = str(cost).replace("Q", "(" + str(q) + ")")  # TODO: just use cost and revenue instead of new variables
-    revenueText = str(revenue).replace("Q", "(" + str(q) + ")")
 
-    # find profit with found quantity
-    profit = eval(revenueText) - eval(costText)
+        create_plot(price, cost, revenue) # This is here because the error occurs here if user gives wrong input
 
-    # Print output
-    output += "\nProfit = P * Q - C \n" + f"Profit = {revenueText.replace('**', '^')} - ({costText.replace('**', '^')})\n" + f"profit = ${round(profit, 4)}"
 
-    # print("\n")
+        # write solving process
+        output = "Profit = Revenue - Cost\n" + "Profit = P * Q - Cost\n" + "max Profit =\n∆ Profit/ ∆ Q = 0\nMR - MC = 0\n" + "max Profit = MR - MC = 0\n" + f"max Profit = {diff(revenue)} - ({diff(cost)}) = 0\n" + f"max Profit = {diff(revenue)} = {diff(cost)}\n"
 
-    # TODO: find monopsony welfare loss
-    if market == "monopoly":
-        welfareLoss = find_monopoly_welfare_loss(Q, cost, p, price, q)
-        output += welfareLoss
+        # Solve for possible quantities
+        quantities = solve(diff(revenue) - diff(cost), Q)
 
-    outputArray = output.split('\n')
-    return outputArray
+        # find possible quantities solutions (could be 0 or higher, if higher choose the higher)
+        q = 0
+        for x in quantities:
+            if x >= 0:
+                print(f"Q could be: {x} units")
+                print(f"Q could be: {N(x, 3)} units")
+            if x > 0:
+                q = x
+
+        # TODO: test this
+        if market != "monopsony":
+            p = price.subs(Q, q)  # finds price for competitive and monopoly markets by finding price at optimal Q
+        else:
+            p = cost.subs(Q, q) # finds price for monopsony by substituting optimal Q in the cost function
+
+        # replacing Q in cost with found quantity value
+        costText = str(cost).replace("Q", "(" + str(q) + ")")  # TODO: just use cost and revenue instead of new variables
+        revenueText = str(revenue).replace("Q", "(" + str(q) + ")")
+
+        # find profit with found quantity
+        profit = eval(revenueText) - eval(costText)
+
+        # Print output
+        output += "\nProfit = P * Q - C \n" + f"Profit = {revenueText.replace('**', '^')} - ({costText.replace('**', '^')})\n" + f"profit = ${round(profit, 4)}"
+
+        # print("\n")
+
+        # TODO: find monopsony welfare loss
+        if market == "monopoly":
+            welfareLoss = find_monopoly_welfare_loss(Q, cost, p, price, q)
+            output += welfareLoss
+
+        outputArray = output.split('\n')
+        outputArray
+        return outputArray
+    except:
+        return []
 
 
 def find_monopoly_welfare_loss(Q, cost, p, price, q):
