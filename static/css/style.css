@@ -1,0 +1,271 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html,body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+
+
+body {
+    font-family: 'Century Gothic Pro', 'Arial','Helvetica', 'sans-serif';
+}
+
+header {
+    background-color: #0E0F3B;
+    height: fit-content;
+    width: auto;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Basic Sans', 'Arial','Helvetica', 'sans-serif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 39px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    margin: 0 auto;
+}
+
+.hero {
+    height: 100vh;
+    background: url('/static/blue_rectangle.png'), url("/static/orangle_circle.png");
+    background-position-x: 20vw, 45vw;
+    background-position-y: 30vh, 10vh;
+    background-size: 25%, 20%;
+    background-repeat: no-repeat;
+}
+
+.inputs {
+    box-sizing: border-box;
+    position: relative;
+    width: 50vw;
+    height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+    background: url(.png), radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.2) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    background-blend-mode: overlay, normal;
+    backdrop-filter: blur(80px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 23px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.box p {
+    font-style: normal;
+    position: absolute;
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 47px;
+    left: 8%;
+    color: #000000;
+}
+
+.box input {
+    position: absolute;
+    left: 8%;
+}
+
+
+
+
+
+
+#price_func {
+    top: 2%;
+}
+
+#cost_func {
+    top: 35%;
+}
+
+#market_func {
+    top: 70%;
+}
+
+#price_form {
+    top: 17%;
+}
+
+#cost_form {
+    top: 50%;
+}
+
+#market_form {
+    top: 85%;
+}
+
+input {
+    width: 55%;
+    /* width: fit-content; */
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    background: none;
+    font-size: 30px;
+    font-family: 'Basic Sans' ,'Arial','Helvetica', 'sans-serif';
+    font-weight: lighter;
+}
+
+#submit_form {
+    opacity: 100;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 77vh;
+    background: url(.png), radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.2) 0%, rgba(110, 190, 244, 0.137) 77.08%, rgba(70, 144, 213, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    background-blend-mode: overlay, normal;
+    backdrop-filter: blur(80px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+
+
+
+
+
+
+/* Solution part */
+
+
+.solution {
+    height: 100vh;
+    background-image: url('/static/solutionsimage.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.solution_box {
+    box-sizing: border-box;
+    position: absolute;
+    width: 45vw;
+    height: 90vh;
+    left: 50%;
+    top: 5%;
+
+    background: url(.png), radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.2) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    background-blend-mode: overlay, normal;
+    backdrop-filter: blur(20px);
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 23px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.solution_box p {
+    padding-left: 20px;
+    font-family: 'Basic Sans', 'Arial, Helvetica, sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+
+    color: #FFFFFF;
+}
+
+#show_graph_button {
+    box-sizing: border-box;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+
+    width: 30vw;
+    padding-top: 0.2%;
+    padding-bottom: 0.3%;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    
+    font-size: 30px;
+    font-family: 'Basic Sans' ,'Arial','Helvetica', 'sans-serif';
+    font-weight: lighter;
+    
+    
+    color: #FFFFFF;
+
+    background: url(.png), radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 238, 255, 0.246) 0%, rgba(42, 73, 93, 0.405) 77.08%, rgba(37, 77, 115, 0.2) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    background-blend-mode: overlay, normal;
+    backdrop-filter: blur(20px);
+
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(164, 144, 28, 0.504));
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.graph_div {
+    position: relative;
+    height: 100vh;
+    padding-top: 25vh;
+}
+
+.image_container {
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+    /* background-image:  url({{ url_for('static', filename='blue_rectangle.jpg') }}); */
+    background-image: url('/static/orangle_circle.png');
+    background: url(.png), radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.2) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+    background-blend-mode: overlay, normal;
+    backdrop-filter: blur(20px);
+
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 23px;
+    filter: drop-shadow(0px 4px 4px rgba(164, 144, 28, 0.504));
+    /* -webkit-backdrop-filter: blur(5px); */
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+#solution_graph {
+    vertical-align: middle;
+}
+
+/* mobile view */
+@media (max-width: 500px) {
+
+    .inputs {
+        width: 90vw;
+    }
+
+    .hero {
+        height: 100vh;
+        background: url('blue_rectangle.png'), url("orangle_circle.png");
+        background-position-x: -20vw, 45vw;
+        background-position-y: 3vh, 30vh;
+        /* background-size: 15%, 20%; */
+        background-repeat: no-repeat;
+    }
+
+
+}

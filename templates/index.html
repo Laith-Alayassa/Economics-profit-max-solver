@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+<header>
+    <h1>
+        Micro Economics
+    </h1>
+</header>
+
+
+<div class="hero">
+    <!-- <img src="res/images/Rectangle 4.png" alt="blue square" id ='blue_square'> -->
+    <div class="inputs">
+        <div class="box">
+            <form action="/solve" method="POST">
+                <p id="price_func">Price Function</p> <input type="text" name="price" id="price_form" value="200 - Q"
+                    required='required'>
+                <p id="cost_func">Cost Function</p><input type="text" name="cost" id="cost_form"
+                    value="Q ^ 2 - 2 * Q + 4" required='required'>
+                <p id="market_func">Market</p><input type="text" name="market" id="market_form" value="monopoly"
+                    required='required'>
+                <input type="submit" value="Solve plz" id="submit_form">
+            </form>
+        </div>
+        <div class="square"> </div>
+
+    </div>
+</div>
+
+<div class="solution" id="solution">
+    <div class="solution_box">
+
+        {% if scroll %}
+        <script>
+            document.getElementById('solution').scrollIntoView();
+        </script>
+        {% endif %}
+
+        <p>
+            {{ solution }}
+        </p>
+    </div>
+
+    <form action="/graph">
+        <button id="show_graph_button">
+            show graph
+        </button>
+    </form>
+</div>
+
+<div class="graph_div" id="graph_div">
+    {% if graph_path %}
+    <script>
+        document.getElementById('graph_div').scrollIntoView();
+    </script>
+    {% endif %}
+    <div class="image_container">
+        <img src="{{url_for('static', filename='plot.png')}}" alt="" id="solution_graph">
+    </div>
+</div>
+
+
+
+{% endblock %}
