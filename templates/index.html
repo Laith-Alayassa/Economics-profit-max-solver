@@ -8,9 +8,14 @@
 {% block body %}
 
 <header>
-    <h1>
-        Micro Economics
-    </h1>
+    <div id="header_container">
+        <h1 id="website_title"> 
+            Profit Maximizer
+        </h1>
+        <a href="https://github.com/ShawermaLVR" id="made_by">Made By: Laith Alayassa</a>
+        
+    </div>
+
 </header>
 
 
@@ -23,7 +28,7 @@
                     required='required'>
                 <p id="cost_func">Cost Function</p><input type="text" name="cost" id="cost_form"
                 placeholder="Q ^ 2 - 2 * Q + 4" required='required'>
-                <p id="market_func">Market</p><input type="text" name="market" id="market_form" placeholder="monopoly"
+                <p id="market_func">Market</p><input type="text" name="market" id="market_form" placeholder="competitive or monopoly"
                     required='required'>
                 <input type="submit" value="Solve plz" id="submit_form">
             </form>
@@ -42,9 +47,12 @@
         </script>
         {% endif %}
 
-        <p>
+        {% for line in solution %}
+            <p> {{line}} </p>
+        {% endfor %}
+        <!-- <p>
             {{ solution }}
-        </p>
+        </p> -->
     </div>
 
     <form action="/graph">

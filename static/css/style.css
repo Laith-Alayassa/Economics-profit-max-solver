@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    caret-color: orange;
 }
 
 html,body {
@@ -7,7 +8,9 @@ html,body {
     padding:0;
     overflow-x:hidden;
 }
-
+::placeholder {
+    opacity: 0.6;
+}
 
 body {
     font-family: 'Century Gothic Pro', 'Arial','Helvetica', 'sans-serif';
@@ -20,16 +23,44 @@ header {
     color: white;
 }
 
-header h1 {
+#header_container {
+    display: flex;
+    vertical-align: bottom;
+}
+
+#website_title {
     font-family: 'Basic Sans', 'Arial','Helvetica', 'sans-serif';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 550;
     font-size: 39px;
+    text-align: left;
     padding-top: 7px;
     padding-bottom: 7px;
-    padding-left: 7px;
+    padding-left: 14px;
     margin: 0 auto;
+    flex: 2;
 }
+
+#made_by {
+    font-family: 'Basic Sans', 'Arial','Helvetica', 'sans-serif';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    padding-top: 16px;
+    padding-right: 7px;
+    margin: 0 auto;
+    color: white;
+    text-align: end;
+    flex: 1;
+    text-decoration: none;
+    transition: 0.3s;
+    
+}
+
+#made_by:hover {
+    padding-top: 18px;
+}
+
 
 .hero {
     height: 100vh;
@@ -116,25 +147,30 @@ input {
 }
 
 #submit_form {
+    cursor: pointer;
+
     opacity: 100;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
     top: 77vh;
-    background: url(.png), radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.2) 0%, rgba(110, 190, 244, 0.137) 77.08%, rgba(70, 144, 213, 0) 100%)
-        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-    ;
+    background: url(.png), radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.2) 0%, rgba(110, 190, 244, 0.137) 77.08%, rgba(70, 144, 213, 0) 100%);
     background-blend-mode: overlay, normal;
     backdrop-filter: blur(80px);
     /* Note: backdrop-filter has minimal browser support */
 
     border-radius: 10px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: 0.3s;
 }
 
 
 
-
+#submit_form:hover {
+    left: 49.5%;
+    top: 76.5vh;
+    filter: drop-shadow(0px 0px 24px rgb(21, 195, 146));
+}
 
 
 
@@ -168,6 +204,12 @@ input {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 23px;
     border: 1px solid rgba(255, 255, 255, 0.7);
+    transition: 0.3s;
+}
+
+.solution_box:hover {
+    filter: blur(35px);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.632));
 }
 
 .solution_box p {
@@ -175,12 +217,13 @@ input {
     font-family: 'Basic Sans', 'Arial, Helvetica, sans-serif';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 28px;
+    line-height: 1;
     color: #FFFFFF;
 }
 
 #show_graph_button {
+    cursor: pointer;
     box-sizing: border-box;
     position: absolute;
     left: 10%;
@@ -211,6 +254,13 @@ input {
     border-radius: 10px;
     filter: drop-shadow(0px 4px 4px rgba(164, 144, 28, 0.504));
     border: 1px solid rgba(255, 255, 255, 0.7);
+    transition: 0.3s;
+}
+
+#show_graph_button:hover {
+    left: 9.8%;
+    top: 49.8%;
+    filter: drop-shadow(0px 0px 24px rgba(21, 195, 146, 0.593));
 }
 
 .graph_div {
@@ -261,6 +311,7 @@ input {
 #solution_graph {
     vertical-align: middle;
 }
+
 
 /* mobile view */
 @media (max-width: 500px) {

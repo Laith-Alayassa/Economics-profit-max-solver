@@ -32,10 +32,6 @@ def show_solution():
 @app.route('/graph')
 def show_graph():
         return redirect(url_for('index')+'#graph_div')
-    # return redirect(url_for('index') + '#graph_div') 
-
-# def update_solution():
-#     return redirect(url_for('index')+'#solution')
 
 if __name__ == "__main__":
     app.run(debug=True, port= 8000)
