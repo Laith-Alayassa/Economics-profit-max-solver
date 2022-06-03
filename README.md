@@ -1,4 +1,5 @@
 # EconProblemSolver
+![github](https://user-images.githubusercontent.com/60319236/171944956-2ad6ac2f-4d2f-4543-95d3-55dda11c7fcb.png)
 
 you can find the webiste [here](https://leoayasa.pythonanywhere.com/)
 
@@ -17,7 +18,6 @@ max Profit = 100 = 2*Q + 3
 
 Q could be: 97/2 units
 
-```
 
 # Things I Learned:
 1. Creating a webiste with **FLASK** library
@@ -25,3 +25,5 @@ Q could be: 97/2 units
 3. Using **virtual enviornemts** and the **terminal**
 4. Using the numpy library, especially using variables with no defined value and operating on them in their symbolic form
 5. Using Figma, HTML, CSS to design the website as this was my first webiste
+
+![screencapture-leoayasa-pythonanywhere-solve-2022-06-03-15_03_40](https://user-images.githubusercontent.com/60319236/171942473-d55244dc-cb75-4d72-a5ef-f47111bbedd7.png)
