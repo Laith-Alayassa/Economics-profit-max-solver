@@ -1,7 +1,7 @@
 # EconProblemSolver
 ![github](https://user-images.githubusercontent.com/60319236/171944956-2ad6ac2f-4d2f-4543-95d3-55dda11c7fcb.png)
 
-you can find the webiste [here](https://leoayasa.pythonanywhere.com/)
+Find and use the webiste [**here**](https://leoayasa.pythonanywhere.com/)
 
 I found myself solving similar equations multiple times during my microeconomics course, solving the problems required taking derivatives and maximizing functions. A high result accuracy was required as well, which made using a simple calculator or the phone insufficient. Double-checking the work was a time-intensive and error-prone process.
 
@@ -17,7 +17,7 @@ max Profit = 100 - (2*Q + 3) = 0
 max Profit = 100 = 2*Q + 3
 
 Q could be: 97/2 units
-
+```
 
 # Things I Learned:
 1. Creating a webiste with **FLASK** library
