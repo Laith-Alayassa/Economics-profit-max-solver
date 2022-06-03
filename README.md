@@ -1,5 +1,6 @@
-# EconProblemSolver
-![github](https://user-images.githubusercontent.com/60319236/171944956-2ad6ac2f-4d2f-4543-95d3-55dda11c7fcb.png)
+# Micro-economics problem solver
+![github](https://user-images.githubusercontent.com/60319236/171945613-fc684e28-4d6c-422a-b514-f49b8ab65e58.png)
+
 
 Find and use the webiste [**here**](https://leoayasa.pythonanywhere.com/)
 
