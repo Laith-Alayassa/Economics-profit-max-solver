@@ -2,7 +2,7 @@
 ![github](https://user-images.githubusercontent.com/60319236/171945613-fc684e28-4d6c-422a-b514-f49b8ab65e58.png)
 
 
-Find and use the webiste [**here**](https://leoayasa.pythonanywhere.com/)
+Find and use the website [**here**](https://leoayasa.pythonanywhere.com/)
 
 I found myself solving similar equations multiple times during my microeconomics course, solving the problems required taking derivatives and maximizing functions. A high result accuracy was required as well, which made using a simple calculator or the phone insufficient. Double-checking the work was a time-intensive and error-prone process.
 
