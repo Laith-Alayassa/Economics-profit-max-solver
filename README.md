@@ -1,5 +1,5 @@
 # Micro-economics problem solver
-[![Profit Maximizer](https://user-images.githubusercontent.com/60319236/171945613-fc684e28-4d6c-422a-b514-f49b8ab65e58.png)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![Profit Maximizer](https://user-images.githubusercontent.com/60319236/171945613-fc684e28-4d6c-422a-b514-f49b8ab65e58.png)](https://youtu.be/V6NCQW5-SMs)
 
 <h1 align="center">
 ☝️ Click Thumbnail to watch Demo on YouTube ☝️
