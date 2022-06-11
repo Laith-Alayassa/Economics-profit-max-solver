@@ -1,8 +1,15 @@
 # Micro-economics problem solver
-![github](https://user-images.githubusercontent.com/60319236/171945613-fc684e28-4d6c-422a-b514-f49b8ab65e58.png)
+[![Profit Maximizer](https://user-images.githubusercontent.com/60319236/171945613-fc684e28-4d6c-422a-b514-f49b8ab65e58.png)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 
+<h1 align="center">
+☝️ Click Thumbnail to watch Demo on YouTube ☝️
+</h1>
 
-Find and use the website [**here**](https://leoayasa.pythonanywhere.com/)
+<h2 align="center">
+Find and use the website here (https://leoayasa.pythonanywhere.com/)
+</h2>
+<br>
+
 
 I found myself solving similar equations multiple times during my microeconomics course, solving the problems required taking derivatives and maximizing functions. A high result accuracy was required as well, which made using a simple calculator or the phone insufficient. Double-checking the work was a time-intensive and error-prone process.
 
