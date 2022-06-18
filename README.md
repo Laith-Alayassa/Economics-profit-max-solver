@@ -3,14 +3,18 @@
 
 
 
-<h1 align="center">
+<!-- <h1 align="center">
 ☝️ Click Thumbnail to watch Demo on YouTube ☝️
-</h1>
-
+</h1> -->
+<br>
 <h2 align="center">
-Find and use the website here (https://leoayasa.pythonanywhere.com/)
+Find and use the website <a href="https://leoayasa.pythonanywhere.com/">here</a> 👈
 </h2>
 <br>
+<br>
+
+
+![ECON SOVLER gif](https://user-images.githubusercontent.com/60319236/174425574-c2616861-0b8b-4198-a663-7c34e233e057.gif)
 
 
 I found myself solving similar equations multiple times during my microeconomics course, solving the problems required taking derivatives and maximizing functions. A high result accuracy was required as well, which made using a simple calculator or the phone insufficient. Double-checking the work was a time-intensive and error-prone process.
